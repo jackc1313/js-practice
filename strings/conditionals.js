@@ -49,38 +49,28 @@ if (tempoAtmosferico === 'pioggia') {
     console.log('oggi c\'e\' bel tempo!');
 };
 
-//switch
-const select = document.querySelector("select");
-const para = document.querySelector("p");
+/*switch. 
+sostituisce l'if in caso ci siano molte opzioni
+perche' e' piu' descrittivo. la sintassi prevede piu' blocchi 
+'case' con un valore. quando switch trova corrispondenza, si ferma
+al 'break' piu' vicino. se non c'e' combinazione caso-valore,
+viene eseguito il codice del default alla fine (opzionale).
+ovviamente tutto questo a fronte di una selezione sulla pagina
+web da parte dell'utente
+i casi si possono raggruppare se danno la stessa risposta 
+e' importante rispettare il tipo dell'elemento inserito*/
+let a = 2 + 2;
 
-select.addEventListener("change", setWeather);
-
-function setWeather() {
-  const choice = select.value;
-
-  switch (choice) {
-    case "sunny":
-      para.textContent =
-        "It is nice and sunny outside today. Wear shorts! Go to the beach, or the park, and get an ice cream.";
-      break;
-    case "rainy":
-      para.textContent =
-        "Rain is falling outside; take a rain coat and an umbrella, and don't stay out for too long.";
-      break;
-    case "snowing":
-      para.textContent =
-        "The snow is coming down — it is freezing! Best to stay in with a cup of hot chocolate, or go build a snowman.";
-      break;
-    case "overcast":
-      para.textContent =
-        "It isn't raining, but the sky is grey and gloomy; it could turn any minute, so take a rain coat just in case.";
-      break;
-    default:
-      para.textContent = "";
-  }
+switch (a) {
+  case 3:
+    alert( 'Too small' );
+    break;
+  case 4:
+    alert( 'Exactly!' );
+    break;
+  case 5:
+    alert( 'Too big' );
+    break;
+  default:
+    alert( "I don't know such values" );
 }
-/* ho copiato questo codice. in sostanza, ho diversi casi e diverse scelte,
-e in base a queste viene ritornato un risultato, con il comando 'break'.
-invece, l-opzione di default:, alla fine, non ha bisogno di break perche' non 
-vi e' altra opzioe dopo.*/
-
