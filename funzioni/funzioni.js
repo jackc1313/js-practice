@@ -27,3 +27,10 @@ console.log(add7(5));
 let moltiplica = (a, b) => a * b;
 console.log(moltiplica(2, 3));
 
+function palindromo(str) {
+    return str === str.split("").reverse().join("");
+}
+
+console.log(palindromo("iresonoseri"));
+console.log(palindromo("anna"));
+console.log(palindromo("pastaalsugo"));
